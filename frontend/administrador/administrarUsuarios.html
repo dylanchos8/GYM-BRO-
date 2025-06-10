@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="/administrador/administrarUsuarios.css">
+</head>
+<body>
+    <h1>Gestión de clientes</h1>
+    <form id="formUsuario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="correo" placeholder="Correo" required>
+        <input type="text" id="contraseña" placeholder="Contraseña" required>
+        <select id="rol">
+            <option value="1">Cliente</option>
+            <option value="2">Admin</option>
+        </select>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Contraseña</th>
+                <th>id_rol</th>
+            </tr>
+        </thead>
+        <tbody id="tablaUsuarios">
+        </tbody>
+    </table>
+    <script src="/administrador/js/administrarUsuarios.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import authRoutes from './routes/authRoutes.js';
+import usuarioRoutes from './routes/usuarioRoutes.js';
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Montar las rutas de autenticación
 app.use('/api', authRoutes); // <-- Añadido
+app.use('/api/usuario', usuarioRoutes);
 
 // Ruta raíz que sirve login.html por defecto
 app.get('/', (req, res) => {
