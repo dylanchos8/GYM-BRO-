@@ -139,3 +139,9 @@ button:hover{
 a{
     text-decoration: none;
 }
+.slogan{
+    background-color: white;
+      color: black; /* opcional: color del texto */
+      padding: 1px;
+      display: inline; /* o 'block' si quieres que ocupe toda la línea */
+}

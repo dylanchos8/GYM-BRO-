@@ -166,7 +166,7 @@ li{
     padding: 20px;
     width: 60%;
 }
-.caja_titulo{
+#caja_titulo{
     display: flex;
     justify-items: flex-start;
 }

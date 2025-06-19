@@ -2,8 +2,14 @@ import cors from 'cors';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import usuarioRoutes from './routes/usuarioRoutes.js';
+import rutinaRoutes from './routes/rutinaRoutes.js';
+import dietaRoutes from './routes/dietaRoutes.js';
+
+
+dotenv.config(); //activa la librería dotenv. Esta librería busca un archivo llamado .env
 
 const app = express();
 app.use(cors());
@@ -18,7 +24,12 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Montar las rutas de autenticación
 app.use('/api', authRoutes); // <-- Añadido
+// ruta usuario
 app.use('/api/usuario', usuarioRoutes);
+//ruta ejercicios
+app.use('/api/rutina', rutinaRoutes);
+//ruta dietas
+app.use('/api/dietas', dietaRoutes);
 
 // Ruta raíz que sirve login.html por defecto
 app.get('/', (req, res) => {

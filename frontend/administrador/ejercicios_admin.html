@@ -64,18 +64,22 @@
             <h1>GYM-BRO</h1>
             <h2>Ejercicios</h2>
         </div>
-        <h2>¡Con cada repetición te acerta a tú mejor versión!</h2>   
-        <div class="seleccionar">
+        <h2>¡Con cada repetición te acerta a tú mejor versión!</h2>
+
+        <div class="contenido-ejercicios" id="listaEjercicios"></div>
+
+
+        <div id="seleccionar" class="seleccionar">
 
             <div id="pectoral">
-                <div class="caja_titulo">
+                <div id="caja_titulo">
                     <h1>Pectoral</h1>
                 </div>
                 <div class="informacion">
-                    <button type="button" class="pectoral" onclick="window.location.href=''"><p id="p">Pectoral</p></button>
+                    <button type="button" class="pectoral" id="boton" onclick="window.location.href=''"><p id="p">Pectoral</p></button>
                     <div class="info">
-                        <h2>¡A TRONAR LAS VENAS!</h2>
-                        <p>Donde hay disciplina, el pectoral refleja el esfuerzo
+                        <h2 id="frase">¡A TRONAR LAS VENAS!</h2>
+                        <p id="descripcion">Donde hay disciplina, el pectoral refleja el esfuerzo
                             
                     </div>
                 </div>
@@ -135,6 +139,9 @@
 
 
     </div>
+
+
+     <script src="ejercicioss.js"></script>
 
 </body>
 </html>

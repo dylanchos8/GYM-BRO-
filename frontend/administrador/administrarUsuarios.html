@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
     <link rel="stylesheet" href="/administrador/administrarUsuarios.css">
+    <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarEjercicios.html'"><p id="p">Ejercicios</button>
+        <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarDietas.html'"><p id="p">Dietas</button>
 </head>
 <body>
+
+    <div class="atras">
+        <button type="button" class="administrarUsuario" onclick="volver()"><p id="p">ATRAS</button>
+        <script>
+        function volver() {
+            window.history.back(); // o window.history.go(-1);
+        }
+        </script>
+    </div>
+
     <h1>Gestión de clientes</h1>
     <form id="formUsuario">
         <input type="text" id="nombre" placeholder="Nombre" required>
@@ -27,6 +39,7 @@
                 <th>Correo</th>
                 <th>Contraseña</th>
                 <th>id_rol</th>
+                <th>Acciones</th> 
             </tr>
         </thead>
         <tbody id="tablaUsuarios">
