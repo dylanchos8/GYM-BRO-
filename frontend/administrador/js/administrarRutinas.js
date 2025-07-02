@@ -6,12 +6,13 @@ document.getElementById('formRutina').addEventListener('submit', async (e) => {
   const rutina = document.getElementById('rutina').value.trim();
   const frase = document.getElementById('frase').value.trim();
   const descripcion = document.getElementById('descripcion').value.trim();
+  const imagen = document.getElementById('imagen').value.trim();
 
   try {
     const res = await fetch(API_RUTINAS, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ rutina, frase, descripcion })
+      body: JSON.stringify({ rutina, frase, descripcion, imagen })
     });
 
     const data = await res.json();
@@ -47,6 +48,8 @@ async function cargarRutinas() {
           <td>${ru.rutina}</td>
           <td>${ru.frase}</td>
           <td>${ru.descripcion}</td>
+          <td>${ru.imagen}</td>
+          <td><button onclick="eliminarRutina(${ru.id})">Eliminar Rutina</button></td>
         </tr>
       `;
 
@@ -86,6 +89,28 @@ async function cargarRutinas() {
     });
   } catch (error) {
     console.error('Error al cargar rutinas:', error);
+  }
+}
+
+
+// eliminar rutinas//
+function eliminarRutina(id) {
+  if (confirm('¿Estás seguro de que deseas eliminar esta rutina?')) {
+    fetch(`${API_RUTINAS}/${id}`, {
+      method: 'delete'
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('No se pudo eliminar la rutina');
+        return res.json(); // Parsear la respuesta
+      })
+      .then(data => {
+        alert(data.message || 'Rutina eliminada correctamente');
+        cargarRutinas(); // Recargar tabla
+      })
+      .catch(error => {
+        console.error('Error al eliminar rutina:', error);
+        alert('Error al eliminar rutina');
+      });
   }
 }
 

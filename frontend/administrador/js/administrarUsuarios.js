@@ -60,7 +60,7 @@ async function cargarUsuarios() {
           <td>${usuario.correo}</td>
           <td>********</td> <!-- Contraseña oculta -->
           <td>${usuario.id_rol}</td>
-          <td><button onclick="eliminarUsuario(${usuario.id})">🗑️</button></td>
+          <td><button onclick="eliminarUsuario(${usuario.id})">Eliminar usuario</button></td>
         </tr>
       `;
     });

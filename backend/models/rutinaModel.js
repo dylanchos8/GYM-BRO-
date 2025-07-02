@@ -12,3 +12,8 @@ export const addRutina = async (rutina, frase, descripcion) => {
   );
   return result;
 };
+
+export const eliminarRutinaBD = async (id) => {
+  const [result] = await pool.query('DELETE FROM rutina WHERE id = ?', [id]);
+  return result;
+};
