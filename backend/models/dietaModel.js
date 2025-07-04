@@ -6,7 +6,15 @@ export const getDietas = async () => {
   return rows;
 };
 
-export const addDieta= async (dieta) => {
-  const [result] = await pool.query('INSERT INTO dietas SET ?', dieta);
+export const addDieta = async (dieta, frase, descripcion, imagen) => {
+  const [result] = await pool.query(
+    'INSERT INTO dietas (dieta, frase, descripcion, imagen) VALUES (?, ?, ?, ?)',
+    [dieta, frase, descripcion, imagen]
+  );
+  return result;
+};
+
+export const eliminarDietaBD = async (id) => {
+  const [result] = await pool.query('DELETE FROM dieta WHERE id = ?', [id]);
   return result;
 };
