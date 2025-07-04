@@ -1,0 +1,291 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url('../imagenes/interfaz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+    background-attachment: fixed; 
+}
+
+.contenido {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: ease 1s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido:hover{
+    box-shadow: 10px 5px 15px rgba(255, 255, 255, 0.5); 
+    opacity: 0.9;
+}
+.ejercicio{
+    background-image: url('../imagenes/ejercicio.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+}
+.dieta{
+    background-image: url('../imagenes/dietas.jpeg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+}
+.estiramiento{
+    background-image: url('../imagenes/ejercicio9.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+}
+.cardio{
+    background-image: url('../imagenes/ejercicio8.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 300px;
+    height: 200px;
+}
+.seleccionar{
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: visible;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-top: 20px;
+}
+.ejercicio{
+    font-size: 30px;
+    width: 450px;
+    height: 350px;
+    font-weight: bold;
+}
+.dieta{
+    font-size: 30px;
+    width: 450px;
+    height: 350px;
+    font-weight: bold;
+}
+.estiramiento{
+    font-size: 30px;
+    width: 450px;
+    height: 350px;
+    font-weight: bold;
+}
+.cardio{
+    font-size: 30px;
+    width: 450px;
+    height: 350px;
+    font-weight: bold;
+}
+
+button:hover{
+    box-shadow: 10px 5px 15px rgba(255, 255, 255, 0.5); 
+    color: dimgray;
+    transform: scale(1.05);
+    opacity: 0.6;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+
+.desafios{
+    display: flex;
+    flex: row;
+    gap: 40px;
+}
+.barra-apartados{
+    background-color: white;
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+ul{
+
+    width: 100px;
+}
+a:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 10px 5px 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+li{
+    list-style: none;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border: 2px solid lightgrey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    padding: 20px;
+    width: 55%;
+}
+.caja_titulo{
+    display: flex;
+    justify-items: flex-start;
+}
+.titulo_desafios{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.button_desafio1{
+    background-image: url('../imagenes/desafio.avif');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+
+}
+.button_desafio2{
+    background-image: url('../imagenes/desafio.avif');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+}
+.button_desafio3{
+    background-image: url('../imagenes/desafio.avif');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+}
+.barra{
+    background-color: white;
+    width: 100%;
+}
+
+.caja_desafios{
+    margin-bottom: 100px;
+}
+footer{
+    display: flex;
+    gap: 40px;
+    margin: 20px;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+}
+#contactos{
+    background-color: black;
+    transform: translateY(200px);
+    width: 100%;
+}
+
+.icon{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.titulo_pagina h1{
+    font-size: 50px;
+    border: 1px solid white;
+    width: 300px;
+}
+
+.linea{
+    height: 45px;
+    background-color: black;
+    width: 1px;
+    margin-left: 25px;
+}
+.cerrar_sesion{
+    text-align: start;
+}
+button{
+    background-color: black;
+}
+#p{
+    background-color: white;
+}
+
