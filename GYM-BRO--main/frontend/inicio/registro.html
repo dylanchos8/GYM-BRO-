@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./registro.css">
+</head>
+<body>
+    <div class="contenido">
+        <div class="caja1">
+            <div class="titulo">
+                <h6>BIENVENIDO</h6>
+                <h1>GYM-BRO</h1>
+                <h2>Crear usuario</h2> 
+                <p>iniciemos una vida saludable</p>
+            </div>
+
+            <form id="registroForm">
+                <h5>USUARIO</h5>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <h5>EMAIL</h5>
+                <input type="email" id="correo" placeholder="Email">
+                <h5>CONTRASEÑA</h5>
+                <input type="password" id="contraseña" placeholder="password">
+                <h5>SELECCIONE SU ROL</h5>
+                <select id="rol">
+                    <option value="1">Cliente</option>
+                    <option value="2">Admin</option>
+                </select>
+                <div class="linea"></div>
+                <button type="submit" class="id">REGISTRAR</button>
+                ¿Tienes cuenta en GYM-BRO?<a href="/inicio/inicio.html">Iniciar sesión</a>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <script src="/inicio/js/register.js"></script>
+</body>
+</html>
