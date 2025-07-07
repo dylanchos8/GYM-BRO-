@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        encabezado
+    </div>
 
+    <div>
+        nombre de la dieta
+    </div>
+    <div>
+        descripcion de la dieta
+    </div>
+    <div>
+        explicacion de la dieta
+    </div>
+    <div>
+        imagen/video de la dieta
+    </div>
+
+    <div>contactos</div>
+</body>
+</html>
