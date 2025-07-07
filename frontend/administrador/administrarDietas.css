@@ -23,7 +23,7 @@ h1 {
 }
 
 /* Formulario */
-form#formDietas {
+form#formDieta {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -31,8 +31,8 @@ form#formDietas {
     margin-bottom: 40px;
 }
 
-form#formDietaqs input,
-form#formDietas button {
+form#formDieta input,
+form#formDieta button {
     padding: 10px 15px;
     font-size: 1rem;
     border-radius: 5px;
@@ -41,19 +41,19 @@ form#formDietas button {
     color: #002f6c;
 }
 
-form#formDietas input:focus {
+form#formDieta input:focus {
     outline: none;
     border-color: #002f6c;
 }
 
-form#formDietas button {
+form#formDieta button {
     background-color: #002f6c;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-form#formDietas button:hover {
+form#formDieta button:hover {
     background-color: #004b99;
 }
 
