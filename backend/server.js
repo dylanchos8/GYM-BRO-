@@ -8,7 +8,6 @@ import authRoutes from './routes/authRoutes.js';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import rutinaRoutes from './routes/rutinaRoutes.js';
 import dietaRoutes from './routes/dietaRoutes.js';
-import logoutRoutes from './routes/logoutRoutes.js'; 
 
 
 dotenv.config();
