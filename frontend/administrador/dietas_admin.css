@@ -263,3 +263,25 @@ footer{
 #p{
     background-color: white;
 }
+
+
+
+.boton-dieta {
+
+  width: 200px;
+  height: 120px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  cursor: pointer;
+}
+
+#botonesDietas{
+    display: flex;
+    flex-direction: column;
+}
