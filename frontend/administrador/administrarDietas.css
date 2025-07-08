@@ -7,10 +7,27 @@
 
 /*body*/
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url('../imagenes/interfaz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    background-attachment: fixed; 
+}
+body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #e6f0ff;
-    color: #002f6c;
     padding: 40px;
+}
+
+.botonesEncabezado#administrar button {
+    height: 20px;
+    width: 20px;
+    color: white;
+    background-color: black;
 }
 
 
@@ -18,7 +35,7 @@ body {
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #002f6c;
+    color: white;
     margin-bottom: 30px;
 }
 
@@ -36,25 +53,25 @@ form#formDieta button {
     padding: 10px 15px;
     font-size: 1rem;
     border-radius: 5px;
-    border: 1px solid #b3cde0;
+    border: 1px solid black;
     background-color: #fff;
-    color: #002f6c;
+    color: black;
 }
 
 form#formDieta input:focus {
     outline: none;
-    border-color: #002f6c;
+    border-color: black;
 }
 
 form#formDieta button {
-    background-color: #002f6c;
+    background-color: gray;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form#formDieta button:hover {
-    background-color: #004b99;
+    background-color: black;
 }
 
 /*Tabla*/
@@ -68,7 +85,7 @@ table {
 }
 
 thead {
-    background-color: #002f6c;
+    background-color: black;
     color: #fff;
 }
 
@@ -80,4 +97,33 @@ th, td {
 
 tbody tr:hover {
     background-color: #f0f8ff;
+}
+
+
+#botonesDietas{
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.boton-dieta {
+
+  width: 200px;
+  height: 120px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  cursor: pointer;
+}
+
+#botonesDietas{
+    display: flex;
+    flex-direction: column;
 }
