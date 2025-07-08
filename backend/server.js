@@ -3,35 +3,43 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import session from 'express-session'; 
 import authRoutes from './routes/authRoutes.js';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import rutinaRoutes from './routes/rutinaRoutes.js';
 import dietaRoutes from './routes/dietaRoutes.js';
+import logoutRoutes from './routes/logoutRoutes.js'; 
 
 
-dotenv.config(); //activa la librería dotenv. Esta librería busca un archivo llamado .env
+dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json()); // necesario para leer req.body si usas JSON
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' })); // permite cookies
+app.use(express.json());
 
-// Para obtener __dirname con ES Modules
+// Configurar sesiones
+app.use(session({
+  secret: 'tu_clave_secreta',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // usa true si estás en HTTPS
+}));
+
+// __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Servir archivos estáticos desde el frontend
+// Archivos estáticos
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Montar las rutas de autenticación
-app.use('/api', authRoutes); // <-- Añadido
-// ruta usuario
+// Rutas
+app.use('/api', authRoutes); //login
+app.use('/api', logoutRoutes); //logout
 app.use('/api/usuario', usuarioRoutes);
-//ruta ejercicios
 app.use('/api/rutina', rutinaRoutes);
-//ruta dietas
 app.use('/api/dietas', dietaRoutes);
 
-// Ruta raíz que sirve login.html por defecto
+// Ruta raíz
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/inicio/inicio.html'));
 });
