@@ -18,3 +18,12 @@ export const eliminarUsuarioBD = async (id) => {
   const [result] = await pool.query('DELETE FROM usuario WHERE id = ?', [id]);
   return result;
 };
+
+export const actualizarContrasena = async (correo, nuevaContrasena) => {
+  return await pool.query('UPDATE usuario SET contrasena = ? WHERE correo = ?', [nuevaContrasena, correo]);
+};
+
+export const buscarUsuarioPorCorreo = async (correo) => {
+  const [rows] = await pool.query('SELECT * FROM usuario WHERE correo = ?', [correo]);
+  return rows[0]; 
+};
