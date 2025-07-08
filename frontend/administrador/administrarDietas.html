@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
-    <link rel="stylesheet" href="/administrador/administrarEjercicios.css">
+    <link rel="stylesheet" href="/administrador/administrarDietas.css">
 </head>
 <body>
 
     <div class="atras">
-        <button type="button" class="administrarUsuario" onclick="volver()"><p id="p">ATRAS</button>
-            
-        <script>
-        function volver() {
-            window.history.back(); // o window.history.go(-1);
-        }
-        </script>
+        <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/agregar.html'"><p id="p">ATRAS</button>
+        
         <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarUsuarios.html'"><p id="p">Usuarios</button>
-        <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarDietas.html'"><p id="p">Dietas</button>
+        <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarRutinas.html'"><p id="p">Dietas</button>
     </div>
 
     <h1>Gestión de Dietas</h1>
@@ -37,6 +32,7 @@
                 <th>Frase</th>
                 <th>Descripcion</th>
                 <th>Imagen</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="tablaDietas">
