@@ -9,12 +9,7 @@
 <body>
 
     <div class="atras">
-        <button type="button" class="administrarUsuario" onclick="volver()"><p id="p">ATRAS</button>
-        <script>
-        function volver() {
-            window.history.back(); // o window.history.go(-1);
-        }
-        </script>
+        <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/agregar.html'"><p id="p">Atras</button>
         <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarUsuarios.html'"><p id="p">Usuarios</button>
         <button type="button" class="administrarUsuario" onclick="window.location.href='/administrador/administrarDietas.html'"><p id="p">Dietas</button>
     </div>
@@ -36,6 +31,7 @@
                 <th>Frase</th>
                 <th>Descripcion</th>
                 <th>Imagen</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="tablaRutinas">
