@@ -15,6 +15,6 @@ export const addDieta = async (dieta, frase, descripcion, imagen) => {
 };
 
 export const eliminarDietaBD = async (id) => {
-  const [result] = await pool.query('DELETE FROM dieta WHERE id = ?', [id]);
+  const [result] = await pool.query('DELETE FROM dietas WHERE id = ?', [id]);
   return result;
 };
